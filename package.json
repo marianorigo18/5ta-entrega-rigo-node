@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "4ta-entrega-rigo-node",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u00004\u0000t\u0000a\u0000-\u0000e\u0000n\u0000t\u0000r\u0000e\u0000g\u0000a\u0000-\u0000r\u0000i\u0000g\u0000o\u0000-\u0000n\u0000o\u0000d\u0000e\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marianorigo18/4ta-entrega-rigo-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marianorigo18/4ta-entrega-rigo-node/issues"
+  },
+  "homepage": "https://github.com/marianorigo18/4ta-entrega-rigo-node#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
