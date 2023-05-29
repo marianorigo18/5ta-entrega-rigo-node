@@ -4,89 +4,26 @@
 		"description": "220v",
 		"price": 1500,
 		"thumbnail": "terminca.jpg",
-		"code": "abc130",
-		"stock": 15,
-		"id": 1
-	},
-	{
-		"title": "termica",
-		"description": "220v",
-		"price": 1500,
-		"thumbnail": "terminca.jpg",
-		"code": "abc131",
-		"stock": 15,
-		"id": 2
-	},
-	{
-		"title": "termica",
-		"description": "220v",
-		"price": 1500,
-		"thumbnail": "terminca.jpg",
-		"code": "abc132",
-		"stock": 15,
-		"id": 3
-	},
-	{
-		"title": "termica",
-		"description": "220v",
-		"price": 1500,
-		"thumbnail": "terminca.jpg",
-		"code": "abc133",
-		"stock": 15,
-		"id": 4
-	},
-	{
-		"title": "termica",
-		"description": "220v",
-		"price": 1500,
-		"thumbnail": "terminca.jpg",
-		"code": "abc134",
-		"stock": 15,
-		"id": 5
-	},
-	{
-		"title": "termica",
-		"description": "220v",
-		"price": 1500,
-		"thumbnail": "terminca.jpg",
-		"code": "abc135",
-		"stock": 15,
-		"id": 6
-	},
-	{
-		"title": "termica",
-		"description": "220v",
-		"price": 1500,
-		"thumbnail": "terminca.jpg",
-		"code": "abc136",
-		"stock": 15,
-		"id": 7
-	},
-	{
-		"title": "termica",
-		"description": "220v",
-		"price": 1500,
-		"thumbnail": "terminca.jpg",
-		"code": "abc137",
-		"stock": 15,
-		"id": 8
-	},
-	{
-		"title": "termica",
-		"description": "220v",
-		"price": 1500,
-		"thumbnail": "terminca.jpg",
-		"code": "abc138",
-		"stock": 15,
-		"id": 9
-	},
-	{
-		"title": "termica",
-		"description": "220v",
-		"price": 1500,
-		"thumbnail": "terminca.jpg",
 		"code": "abc139",
 		"stock": 15,
-		"id": 10
+		"id": "969588b5-f799-40f4-8b09-808b3adf3104"
+	},
+	{
+		"title": "termica",
+		"description": "220v",
+		"price": 1500,
+		"thumbnail": "terminca.jpg",
+		"code": "abc149",
+		"stock": 15,
+		"id": "998c407f-1c74-41bb-a5eb-ad7306db23fd"
+	},
+	{
+		"title": "termica",
+		"description": "220v",
+		"price": 1500,
+		"thumbnail": "terminca.jpg",
+		"code": "abc169",
+		"stock": 15,
+		"id": "961e1bfe-3778-4f54-93e8-1069c9672c6f"
 	}
 ]
