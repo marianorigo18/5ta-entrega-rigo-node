@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
 })
 
 router.delete("/:id", async (req, res) => {
-    const params = Number(req.params.id)
+    const params = req.params.id
     const productId = await productsManger.deleteProductById(params)
     res.send({productId})
 })

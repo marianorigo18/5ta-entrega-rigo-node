@@ -4,26 +4,17 @@
 		"description": "220v",
 		"price": 1500,
 		"thumbnail": "terminca.jpg",
-		"code": "abc139",
+		"code": "abc178",
 		"stock": 15,
-		"id": "969588b5-f799-40f4-8b09-808b3adf3104"
+		"id": "4bbe959f-5140-4105-a8fd-37e7a780bca1"
 	},
 	{
 		"title": "termica",
 		"description": "220v",
 		"price": 1500,
 		"thumbnail": "terminca.jpg",
-		"code": "abc149",
+		"code": "abc177",
 		"stock": 15,
-		"id": "998c407f-1c74-41bb-a5eb-ad7306db23fd"
-	},
-	{
-		"title": "termica",
-		"description": "220v",
-		"price": 1500,
-		"thumbnail": "terminca.jpg",
-		"code": "abc169",
-		"stock": 15,
-		"id": "961e1bfe-3778-4f54-93e8-1069c9672c6f"
+		"id": "05f02c7b-c8b7-47fe-b366-3bcfe45965a0"
 	}
 ]

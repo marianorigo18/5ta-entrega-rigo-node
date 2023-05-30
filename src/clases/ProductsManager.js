@@ -35,8 +35,7 @@ export default class ProductsManager{
         const productsContent = await this.getProducts()
         const productContent = productsContent.find((prod)=> prod.code == info.code)
         if(productContent){
-            console.log(`ya existe un producto con el code ${info.code}`);
-            return;
+            return `ya existe un producto con el code ${info.code}`
         }
 
         const product = info
@@ -53,7 +52,7 @@ export default class ProductsManager{
 
         await fs.promises.writeFile(path, JSON.stringify(this.products, null, "\t"));
 
-        console.log(`nuevo producto agregado con code ${info.code}`)
+        return `nuevo producto agregado con code ${info.code}`
     }
 
     getProductByCode = async (code) => {
@@ -129,7 +128,7 @@ export default class ProductsManager{
     }
 }
 
-const products = new ProductsManager()
+//const products = new ProductsManager()
 
 //const env = async () => {
     //console.log(await products.getProducts())
