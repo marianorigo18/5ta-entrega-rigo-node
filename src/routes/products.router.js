@@ -22,6 +22,13 @@ router.post("/", async (req, res) => {
     res.send(newProduct);
 })
 
+router.put("/:id", async (req, res) => {
+    const prodId = req.params.id;
+    const prodUp = req.body;
+    const updateProd = await productsManger.updateProduct(prodId, prodUp)
+    res.send(updateProd)
+})
+
 router.delete("/:id", async (req, res) => {
     const params = req.params.id
     const productId = await productsManger.deleteProductById(params)

@@ -109,17 +109,16 @@ export default class ProductsManager{
                 return;
             }
             if(products[productIdx].code === productUpdate.code){
-                console.log(`Existe un producto con code: ${productUpdate.code}. No se actualiza el producto.`)
-                return;
+                return `Existe un producto con code: ${productUpdate.code}. No se actualiza el producto.`
             }
             // el producto buscado existe, no hay problemas con el code, entonces lo actualizo
             products[productIdx] = {...products[productIdx], ...productUpdate};
             await fs.promises.writeFile(path, JSON.stringify(products, null, "\t"))
             // si se actualizo, logueamos por consola
-            console.log(`Producto con id: ${id} actualizado.`);
+            return `Producto con id: ${id} fue actualizado.`
         }else {
             // no hay productos
-            console.log("No hay productos. No se puede realizar la actualización.");
+            return "No hay productos. No se puede realizar la actualización."
           }
     }
 }

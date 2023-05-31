@@ -5,13 +5,13 @@
 		"price": 1500,
 		"thumbnail": "terminca.jpg",
 		"code": "abc167",
-		"stock": 15,
+		"stock": 50,
 		"id": "7e02b119-ac06-4bd7-9be4-5b8f3163a6ad"
 	},
 	{
 		"title": "termica",
 		"description": "220v",
-		"price": 1500,
+		"price": 6000,
 		"thumbnail": "terminca.jpg",
 		"code": "abc67",
 		"stock": 15,
