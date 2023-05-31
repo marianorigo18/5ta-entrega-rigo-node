@@ -4,10 +4,6 @@ const path = "src/clases/files/products.json"
 
 export default class ProductsManager{
 
-    constructor(){
-        this.products = [];
-    }
-
     getProducts = async (limite) => {
         if(fs.existsSync(path)){
             const users = await fs.promises.readFile(path, "utf-8");
@@ -48,9 +44,9 @@ export default class ProductsManager{
             product.id = this.products[this.products.length-1].id + 1
         }*/
 
-        this.products.push(product)
+        productsContent.push(product)
 
-        await fs.promises.writeFile(path, JSON.stringify(this.products, null, "\t"));
+        await fs.promises.writeFile(path, JSON.stringify(productsContent, null, "\t"));
 
         return `nuevo producto agregado con code ${info.code}`
     }
