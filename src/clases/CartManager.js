@@ -12,8 +12,6 @@ export default class ManagerCarts {
 
   consultarCarts = async () => {
 
-    console.log("existe", fs.existsSync(path));
-
     if (fs.existsSync(path)) {
 
       const data = await fs.promises.readFile(path, "utf-8");

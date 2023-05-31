@@ -22,10 +22,17 @@ export default class ProductsManager{
         if( info.title == null ||
             info.description == null ||
             info.price == null ||
-            info.thumbnail == null ||
             info.stock == null ||
             info.code == null){
             return "Debe completar todos los campos por favor";
+        }
+
+        if(!info.thumbnail){
+            info.thumbnail = [];
+        }
+
+        if(!info.status){
+            info.status = true;
         }
 
         const productsContent = await this.getProducts()
@@ -101,6 +108,9 @@ export default class ProductsManager{
         }
     }
     updateProduct = async (id, productUpdate) => {
+        if(productUpdate.id){
+            return "no se pueden actualizar los ids"
+        }
         const products = await this.getProducts()
         if(products.length > 0){
             const productIdx = products.findIndex((p)=> p.id === id)

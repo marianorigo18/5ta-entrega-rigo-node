@@ -7,8 +7,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.use("/products", routerProducts)
-app.use("/carts", routerCarts)
+app.use("/api/products", routerProducts)
+app.use("/api/carts", routerCarts)
 
 app.listen(8081, ()=>{
     console.log("escuchando")
