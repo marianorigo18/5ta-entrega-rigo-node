@@ -68,15 +68,26 @@ export default class ProductsManager{
         return product
     } 
 
+    // getProductById = async (id) => {
+    //     const products = await this.getProducts()
+    //     const result = products.filter((prod) => prod.id == id)
+    //     if(result.length == 0){
+    //         // console.log(`no se encontro el producto con id ${id}`)
+    //         return `no se encontro el producto con id ${id}`;
+    //     }
+    //     return result
+    // }
+
     getProductById = async (id) => {
-        const products = await this.getProducts()
-        const result = products.filter((prod) => prod.id == id)
-        if(result.length == 0){
+        const products = await this.getProducts();
+        const result = products.find((prod) => prod.id == id);
+        if (!result) {
             // console.log(`no se encontro el producto con id ${id}`)
             return `no se encontro el producto con id ${id}`;
         }
-        return result
+        return result;
     }
+    
 
     deleteProductById = async (id) => {
         const products = await this.getProducts()

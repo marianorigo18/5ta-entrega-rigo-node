@@ -13,7 +13,8 @@ router.get("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
     const productId = await productsManger.getProductById(req.params.id)
-    res.send(productId)
+    console.log(productId)
+    res.render("products", { product: productId });
 })
 
 router.post("/", async (req, res) => {
