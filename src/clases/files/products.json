@@ -103,14 +103,25 @@
 		"id": "e6f62e1f-d8f2-46a0-8edc-a6bbc49f6b4b"
 	},
 	{
-		"title": "sfsdfas",
-		"description": "fasdfas",
-		"price": 15,
-		"code": 6854645,
-		"stock": 15,
-		"category": "asdfasdf",
+		"title": "contactor",
+		"description": "contactor 380v",
+		"price": 8500,
+		"code": 55513,
+		"stock": 50,
+		"category": "contactores",
 		"status": true,
 		"thumbnail": [],
-		"id": "c562ef93-bae1-41f8-97a0-c8f0957cb6b9"
+		"id": "9340ed50-c248-4e58-b3d3-3acb23a1027f"
+	},
+	{
+		"title": "pinza pelacable",
+		"description": "pinzas",
+		"price": 12000,
+		"code": 13513,
+		"stock": 15,
+		"category": "pelacable",
+		"status": true,
+		"thumbnail": [],
+		"id": "873bc0fa-acb2-4a93-904c-6e6aae04eedf"
 	}
 ]
