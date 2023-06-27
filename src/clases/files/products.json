@@ -123,5 +123,27 @@
 		"status": true,
 		"thumbnail": [],
 		"id": "873bc0fa-acb2-4a93-904c-6e6aae04eedf"
+	},
+	{
+		"title": "tomate",
+		"description": "tomate en lata",
+		"price": 350,
+		"code": 151502,
+		"stock": 200,
+		"category": "alimentos",
+		"status": true,
+		"thumbnail": [],
+		"id": "efe30652-1458-4c87-bed3-497a71bfd899"
+	},
+	{
+		"title": "notebook",
+		"description": "potente notebook",
+		"price": 350001,
+		"code": 125125,
+		"stock": 120,
+		"category": "tecnologia",
+		"status": true,
+		"thumbnail": [],
+		"id": "9e926621-d216-4fcf-8bfd-2c673eb8a360"
 	}
 ]

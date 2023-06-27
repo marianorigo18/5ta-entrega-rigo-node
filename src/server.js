@@ -2,7 +2,7 @@ import express from "express";
 import { Server } from "socket.io";
 import __dirname from "./utils.js";
 import handlebars from "express-handlebars";
-import ProductsManager from "./clases/ProductsManager.js";
+import ProductsManager from "./daos/mongodb/ProductsManager.js";
 
 import routerProducts from "./routes/products.router.js";
 import routerCarts from "./routes/cart.router.js";
