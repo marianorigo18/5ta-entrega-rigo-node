@@ -2,7 +2,7 @@ import { Router } from "express";
 
 const router = Router();
 
-import ProductsManager from "../daos/mongodb/ProductsManager";
+import ProductsManager from "../daos/mongodb/ProductsManager.js";
 
 const productsManger = new ProductsManager()
 
@@ -14,7 +14,8 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
     const productId = await productsManger.getProductById(req.params.id)
     console.log(productId)
-    res.render("products", { product: productId });
+    res.send(productId)
+    //res.render("products", { product: productId });
 })
 
 router.post("/", async (req, res) => {

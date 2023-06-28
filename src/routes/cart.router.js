@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import ManagerCarts from "../clases/CartManager.js";
+import ManagerCarts from "../daos/mongodb/CartManager.js";
 
 const router = Router();
 
