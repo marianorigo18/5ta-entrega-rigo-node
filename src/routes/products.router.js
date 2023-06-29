@@ -20,7 +20,10 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
     const product = req.body;
+    
     const newProduct = await productsManger.createProducts(product)
+    const products = await productsManger.getProducts();
+    req.socketServer.sockets.emit("update-products", products)
     res.send(newProduct);
 })
 

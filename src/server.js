@@ -18,12 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 //configuracion de handlebars
 app.engine("handlebars", handlebars.engine());
 app.set("views", __dirname + "/views");
-app.set("view engine", "handlebars");
-
-app.use("/", routerViews)
-app.use("/api/products", routerProducts)
-app.use("/api/carts", routerCarts)
-  
+app.set("view engine", "handlebars");  
 
 const expressServer = app.listen(8081, ()=>{console.log("escuchando")});
 const socketServer = new Server(expressServer);
@@ -49,3 +44,12 @@ socketServer.on("connection", async(socket)=>{
     socketServer.emit("update-products", await productsManger.getProducts())
     })
 })
+
+app.use((req, res, next) => {
+  req.socketServer = socketServer;
+  next()
+})
+
+app.use("/", routerViews)
+app.use("/api/products", routerProducts)
+app.use("/api/carts", routerCarts)

@@ -17,7 +17,7 @@ export default class ManagerCarts {
   };
 
   consultarCartPorId = async (id) => {
-    const result = await cartModel.findOne({_id: id})
+    const result = await cartModel.findOne({_id: id}).populate("products.product")
     return result
   };
 
@@ -25,7 +25,7 @@ export default class ManagerCarts {
     const product = await this.productManager.getProductById(idProduct);
     const cart = await this.consultarCartPorId(idCart)
     cart.products.push({product: product});
-    cart.save()
+    await cart.save()
     return;
   }
 }

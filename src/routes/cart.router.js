@@ -23,6 +23,9 @@ router.get("/:id", async (req, res) => {
 router.get("/", async (req, res) => {
 
   const carts = await managerCarts.consultarCarts();
+  if(!carts){
+    res.send("no se encontro el carrito")
+  }
 
   res.send(carts);
 
@@ -38,7 +41,7 @@ router.post("/", async (req, res) => {
 
 });
 
- router.post("/:cid/products/:pid", async (req, res) =>{
+ router.post("/:cid/product/:pid", async (req, res) =>{
     const cartId = req.params.cid;
     const productId = req.params.pid;
 
