@@ -22,10 +22,17 @@ export default class ManagerCarts {
   };
 
   agregarProductoEnCarrito = async (idCart, idProduct) => {
-    const product = await this.productManager.getProductById(idProduct);
     const cart = await this.consultarCartPorId(idCart)
-    cart.products.push({product: product});
-    await cart.save()
+    let exist = cart.products.find((prod)=>{
+      return prod.product.id === idProduct
+    })
+    if(!exist){
+    const product = await this.productManager.getProductById(idProduct);
+    cart.products.push({product: product, quantiy: 1})
+    }else{
+    exist.quantiy +=1
+    }
+    await cart.save();
     return;
   }
 }
