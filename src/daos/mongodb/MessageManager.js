@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-import { messageModel } from "./models/messages.model";
+import { messageModel } from "./models/messages.model.js";
 
 export default class ManagerMessage {
     connection = mongoose.connect("mongodb+srv://marianowagnerrigo18:Marawarigo3360@cluster0.xjgkqac.mongodb.net/")

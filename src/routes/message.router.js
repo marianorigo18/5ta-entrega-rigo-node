@@ -1,6 +1,6 @@
 import {Router} from "express";
 
-import ManagerMessage from "../daos/mongodb/MessageManager";
+import ManagerMessage from "../daos/mongodb/MessageManager.js";
 
 const router = Router();
 const managerMessage = new ManagerMessage()
@@ -63,3 +63,5 @@ router.delete("/:mid", async (req, res) => {
         });
     }
 });
+
+export default router

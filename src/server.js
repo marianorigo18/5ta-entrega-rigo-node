@@ -7,6 +7,7 @@ import ProductsManager from "./daos/mongodb/ProductsManager.js";
 import routerProducts from "./routes/products.router.js";
 import routerCarts from "./routes/cart.router.js";
 import routerViews from "./routes/views.router.js";
+import routerMessage from "./routes/message.router.js"
 
 
 const app = express();
@@ -53,3 +54,4 @@ app.use((req, res, next) => {
 app.use("/", routerViews)
 app.use("/api/products", routerProducts)
 app.use("/api/carts", routerCarts)
+app.use("/api/chat", routerMessage)
