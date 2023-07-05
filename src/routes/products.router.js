@@ -7,7 +7,10 @@ import ProductsManager from "../daos/mongodb/ProductsManager.js";
 const productsManger = new ProductsManager()
 
 router.get("/", async (req, res) => {
-    const products = await productsManger.getProducts(req.query.limit)
+    let limit = Number(req.query.limit);
+    let page = Number(req.query.page);
+    let sort = Number(req.query.sort);
+    const products = await productsManger.getProducts(limit, page, sort);
     res.send(products)
 });
 

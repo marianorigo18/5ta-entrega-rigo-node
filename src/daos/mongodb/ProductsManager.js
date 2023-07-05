@@ -4,10 +4,10 @@ import { productsModel } from "./models/products.model.js";
 export default class ProductsManager{
     connection = mongoose.connect("mongodb+srv://marianowagnerrigo18:Marawarigo3360@cluster0.xjgkqac.mongodb.net/")
 
-    getProducts = async (limite) => {
-        let result = await productsModel.find().lean()
+    getProducts = async (limit = 10, page = 1, sort = 0) => {
+        let result = await productsModel.paginate({}, {limit: limit, page: page, sort: {price: sort}})
         return result
-    }
+    }           
 
     createProducts = async (product) => {
         try{
