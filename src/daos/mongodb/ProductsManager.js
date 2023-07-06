@@ -4,8 +4,15 @@ import { productsModel } from "./models/products.model.js";
 export default class ProductsManager{
     connection = mongoose.connect("mongodb+srv://marianowagnerrigo18:Marawarigo3360@cluster0.xjgkqac.mongodb.net/")
 
-    getProducts = async (limit = 10, page = 1, sort = 0) => {
-        let result = await productsModel.paginate({}, {limit: limit, page: page, sort: {price: sort}})
+    getProducts = async (limit = 10, page = 1, sort = 0, filtro = null, filtroVal = null) => {
+        let whereOption = {};
+        if(filtro != "" && filtroVal != ""){
+            whereOption = {[filtro]: filtroVal}
+        }
+        let result = await productsModel.paginate(whereOption,{
+            limit: limit,
+             page: page,
+            sort: {price: sort}})
         return result
     }           
 

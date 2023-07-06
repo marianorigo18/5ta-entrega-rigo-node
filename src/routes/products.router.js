@@ -10,7 +10,9 @@ router.get("/", async (req, res) => {
     let limit = Number(req.query.limit);
     let page = Number(req.query.page);
     let sort = Number(req.query.sort);
-    const products = await productsManger.getProducts(limit, page, sort);
+    let filtro = req.query.filtro;
+    let filtroVal = req.query.filtroVal;
+    const products = await productsManger.getProducts(limit, page, sort, filtro, filtroVal);
     res.send(products)
 });
 
