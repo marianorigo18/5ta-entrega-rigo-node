@@ -55,8 +55,6 @@ router.put("/:cid", async (req, res)=>{
   try{
     const cid = req.params.cid
     const bodyCart = req.body;
-    console.log(cid)
-    console.log(bodyCart)
     const updateResult = await managerCarts.updateCart(cid, bodyCart)
     console.log(updateResult)
     if(!updateResult){
