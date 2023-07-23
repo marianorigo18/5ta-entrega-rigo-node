@@ -49,4 +49,14 @@ export default class ManagerCarts {
     await cart.save();
     return;
   }
+
+  updateCart = async (cid, updateCartFields) =>{
+    let result = await cartModel.updateOne({
+      _id: cid
+    }, {
+      $set: updateCartFields
+    });
+    await cart.save();
+    return result;
+  }
 }

@@ -53,10 +53,28 @@ router.post("/", async (req, res) => {
 
 router.put("/:cid", async (req, res)=>{
   try{
-    res.send("Hello from put cart")
-  }catch{
+    const cid = req.params.cid
+    const bodyCart = req.body;
+    console.log(cid)
+    console.log(bodyCart)
+    const updateResult = await managerCarts.updateCart(cid, bodyCart)
+    console.log(updateResult)
+    if(!updateResult){
+      console.log(`No se encontró ningún carrito con el ID ${cid}.`)
+      res.status(404).json({
+          error: `No se encontró ningún carrito con el ID ${cid}.`
+      });
+  } else {
+      res.send(updateResult);
+      console.log(`${updateResult}.`)
+  }
+  }catch(error){
+    console.error("Error:", error.message);
+    res.status(500).json({
+        error: "Error al actualizar el Carrito. Por favor, inténtelo de nuevo más tarde."
+    });
   }
 })
-//actualiza el carrito el contenido de un carrito
+//actualiza el carrito el contenido de un carrito 
 
 export default router;
