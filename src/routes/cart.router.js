@@ -34,14 +34,6 @@ router.post("/", async (req, res) => {
  })
 //enviamos el idToCart y idToProduct agrega un producto al carrito (funciona)
 
- router.delete("/:cid", async (req, res) =>{
-    const cartId = req.params.cid;
-
-    await managerCarts.deleteAllProductFromCart(cartId)
-    res.send({status: "success"})
- })
- //elimina todos los productos del cart mediante el id (funciona)
-
  router.delete("/:cid/product/:pid", async (req, res) =>{
   const cartId = req.params.cid;
   const productId = req.params.pid;
@@ -74,5 +66,34 @@ router.put("/:cid", async (req, res)=>{
   }
 })
 //actualiza el carrito el contenido de un carrito 
+
+router.put("/:cid/products/:pid", async (req, res) => {
+try {
+  const cid = req.params.cid;
+  const pid = req.params.pid;
+  const updatedProdInCart = req. body;
+  const updatedProdCart = await managerCarts.updateProductToCart(cid, pid, updatedProdInCart);
+  if (!updatedProdCart) {
+    console.log(updatedProdCart);
+  } else {
+    res.send(updatedProdCart);
+    console.log(updatedProdCart);
+  }
+
+} catch (error) {
+  console.error("Error:", error.message);
+  res.status(500).json({ error: "Ocurrió un error al actualizar el producto en el carrito." });
+}
+})
+
+//actualiza solo la cantidad de ejemplares de el producto del carrito
+
+router.delete("/:cid", async (req, res) =>{
+  const cartId = req.params.cid;
+
+  await managerCarts.deleteAllProductFromCart(cartId)
+  res.send({status: "success"})
+})
+//elimina todos los productos del cart mediante el id (funciona)
 
 export default router;

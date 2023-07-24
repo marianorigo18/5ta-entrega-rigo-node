@@ -59,4 +59,12 @@ export default class ManagerCarts {
     await cart.save();
     return result;
   }
+
+  updateProductToCart = async (cid, pid, updatedProdInCart) => {
+    const cart = await this.getProductById(cid);
+    const product = cart.products.find((p) => p._id.toString() === pid);
+    product.quantity = updatedProdInCart.quantity;
+    await cart.save();
+    return cart;
+  }
 }
